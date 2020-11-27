@@ -71,8 +71,6 @@ public class Solution {
         else return false;
     }
     public boolean solve(ServerInfo server, byte[] bytes) throws Exception {
-        System.out.println(Arrays.toString(actualParameterNames));
-        System.out.println(Arrays.toString(actualParameterTypes));
         Object[] objects = persistence.deserialize(actualParameterNames, bytes, actualParameterTypes);
         if (withPlayer) {
             objects = ArrayUtils.add(objects, 0, server);
